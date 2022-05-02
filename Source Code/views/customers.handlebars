@@ -1,0 +1,111 @@
+<html>
+    
+        <div class="customers">
+            <h2>Customers</h2>
+
+            <h3>Add Customer</h3>
+
+            <form class="add-form" action="/customers" method="post">
+                
+                <label class="form-label">First Name:</label>
+                <input type="text" class="form-text" name="firstName">
+                <br>
+                <label class="form-label">Last Name:</label>
+                <input type="text" class="form-text" name="lastName">
+                <br>
+                <label class="form-label">Username:</label>
+                <input type="text" class="form-text" name="username">
+                <br>
+                <label class="form-label">Password:</label>
+                <input type="text" class="form-text" name="password">
+                <br>
+                <label class="form-label">Date of Birth:</label>
+                <input type="text" class="form-text" name="dateOfBirth">
+                <br>
+                <label class="form-label">Phone Number:</label>
+                <input type="text" class="form-text" name="phoneNumber">
+                <br>
+                <label class="form-label">Email:</label>
+                <input type="text" class="form-text" name="email">
+                <br>
+                <label class="form-label">Street:</label>
+                <input type="text" class="form-text" name="street">
+                <br>
+                <label class="form-label">City:</label>
+                <input type="text" class="form-text" name="city">
+                <br>
+                <label class="form-label">State:</label>
+                <input type="text" class="form-text" name="state">
+                <br>
+                <label class="form-label">Zip:</label>
+                <input type="text" class="form-text" name="zip">
+                <br>
+                <label class="form-label">Country:</label>
+                <input type="text" class="form-text" name="country">
+                <br>
+
+                <input type="submit" class="addBtn" value="Add Customer">
+            </form>
+            <br>
+
+			<h3>Search Customers</h3>
+            <label class="form-label"> Search By First Name:</label>
+            <form id='search_customer' action='' method=''>
+				<input id='search_input' class='form-text2' type='text' name='search_input' value=''>	
+ 	        	<input type="button" value="Search" class="editBtn" onclick="searchCustomer()">
+            </form>
+
+            <label class="form-label"> Search By Last Name:</label>
+            <form id='search_customer' action='' method=''>
+				<input id='search_last' class='form-text2' type='text' name='search_last' value=''>	
+ 	        	<input type="button" value="Search" class="editBtn" onclick="searchCustomerByLastName()">
+            </form>
+
+			<h3>All Customers</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Customer ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Username</th>
+                        <th>Password</th>
+                        <th>Date of Birth</th>
+                        <th>Phone Number</th>
+                        <th>Email</th>
+                        <th>street</th>
+                        <th>city</th>
+                        <th>state</th>
+                        <th>zip</th>
+                        <th>country</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each customers}}
+                    <tr>
+                        <td>{{customerID}}</td>
+                        <td>{{firstName}}</td>
+                        <td>{{lastName}}</td>
+                        <td>{{username}}</td>
+                        <td>{{password}}</td>
+                        <td>{{dateOfBirth}}</td>
+                        <td>{{phoneNumber}}</td>
+                        <td>{{email}}</td>
+                        <td>{{street}}</td>
+                        <td>{{city}}</td>
+                        <td>{{state}}</td>
+                        <td>{{zip}}</td>
+                        <td>{{country}}</td> 
+                    	<td>
+
+                            <td><button class="editBtn"><a href="/customers/{{customerID}}" class="btn-link">Edit</a></button></td>
+                            <td><button class="deleteBtn" onclick="deleteCustomer({{customerID}})">Delete</button></td>
+						</td>
+					</tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+</html>
+
+

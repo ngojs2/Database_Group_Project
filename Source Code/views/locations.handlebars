@@ -1,0 +1,88 @@
+
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        
+        <link rel="stylesheet" type="text/css" href="/style.css">
+        <title>Locations</title>
+    </head>
+    <body>
+
+        <div class="locations">
+            <h2>Locations</h2>
+
+            <h3>Add Location</h3>
+
+            <!--- Form to add locations -->
+            <form class="locations-form" action="/locations" method="post">
+                
+                <label>Street:</label>
+                <input type="text" class="locations-text" name="street">
+                <br>
+                <label>City:</label>
+                <input type="text" class="locations-text" name="city">
+                <br>
+                <label>State:</label>
+                <input type="text" class="locations-text" name="state">
+                <br>
+                <label>Zip:</label>
+                <input type="text" class="locations-text" name="zip">
+                <br>
+                <label>Country:</label>
+                <input type="text" class="locations-text" name="country">
+                <br>
+                <label>Phone Number:</label>
+                <input type="text" class="locations-text" name="phoneNumber">
+                <br>
+                <input type="submit" class="addBtn" value="Add Location">
+            </form>
+
+            <br>
+
+            <!--- Form to filter locations -->
+            <form id='filter_locations' action='' method=''>
+                <label> Filter Locations by ID </label>
+                <select id='location_filter' name="storeID"> 
+                    {{#each locations}}
+                    <option value="{{storeID}}">{{storeID}}</option>
+                    {{/each}}
+                </select><br>
+                <input type="button" class="addBtn" value="Filter" onclick="filterLocationByID()">
+            </form>
+            
+            <br>
+
+            <!--- Table to display locations -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Store ID</th>
+                        <th>Street</th>
+                        <th>City</th>
+                        <th>State</th>
+                        <th>Zip</th>
+                        <th>Country</th>
+                        <th>Phone Number</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each locations}}
+                    <tr>
+                        <td>{{storeID}}</td>
+                        <td>{{street}}</td>
+                        <td>{{city}}</td>
+                        <td>{{state}}</td>
+                        <td>{{zip}}</td>
+                        <td>{{country}}</td>
+                        <td>{{phoneNumber}}</td>
+                        <td><button class="addBtn"><a href="/locations/{{storeID}}">Edit</a></button></td>
+                        <td><button class="addBtn" onclick="deleteLocation({{storeID}})">Delete</button></td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+
+        </body>
+</html>

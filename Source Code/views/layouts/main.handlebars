@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/style.css">
+        <title>Bits N Bytes</title>
+        
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        {{#each jsscripts}}
+        <script src="/static/{{this}}"></script>
+        {{/each}}
+        
+    </head>
+    <body>
+        <!-- Horizontal navigation bar-->
+        <nav>
+            <div class="logo">
+                <h4>Bits N Bytes</h4>
+            </div>
+            <ul class="nav-bar">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/orders">Orders</a>
+                </li>
+                
+                <li>
+                    <a href="/customers">Customers</a>
+                </li>
+                <li>
+                    <a href="/products">Products</a>
+                </li>
+                <li>
+                    <a href="/locations">Locations</a>
+                </li>
+        </nav>
+       {{{body}}}
+    </body>
+</html>

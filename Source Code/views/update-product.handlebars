@@ -1,0 +1,21 @@
+  
+<html>
+     <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="/style.css">
+        <title>Locations</title>
+    </head>
+    <div class="products">
+        <h2>Update Product: {{product.id}}</h2>
+
+        <form id="update-product" class="products-form" method="post">
+        Product Name: <input type="text" class="products-text" name="productName" value="{{product.productName}}"><br>
+        Price: <input type="text" class="products-text" name="price" value="{{product.price}}"><br> 
+        Brand: <input type="text" class="products-text" name="brand" value="{{product.brand}}"><br> 
+        Category: <input type="text" class="products-text" name="category" value="{{product.category}}"><br> 
+        Store ID: <input type="text" class="products-text" name="storeID" value="{{product.storeID}}"><br>
+
+        <button class="addBtn" onclick="updateProduct({{product.id}})">Update</button>
+        </form> 
+    </div>
+</html>

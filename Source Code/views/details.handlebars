@@ -1,0 +1,35 @@
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>Locations</title>
+    </head>
+    <body>
+
+
+
+<div class="details">
+    <h2>Order Details</h2>  
+    <p>This page will display details data for the the selected order. Sample Below:</p><br>    
+        <table class="details">
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Product ID</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each details}}
+                <tr>
+                    <td>{{id}}</td>
+                    <td>{{productID}}</td>
+                    <td>{{quantity}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>  
+</div>
+

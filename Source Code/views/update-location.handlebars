@@ -1,0 +1,23 @@
+  
+<html>
+     <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="/style.css">
+        <title>Locations</title>
+    </head>
+    
+    <div class="locations">
+        <h2>Update Location: {{location.id}}</h2>
+        
+        <form id="update-location" class="locations-form" method="post">
+        Street: <input type="text" class="locations-text" name="street" value="{{location.street}}"><br>
+        City: <input type="text" class="locations-text" name="city" value="{{location.city}}"><br> 
+        State: <input type="text" class="locations-text" name="state" value="{{location.state}}"><br> 
+        Zip: <input type="text" class="locations-text" name="zip" value="{{location.zip}}"><br> 
+        Country: <input type="text" class="locations-text" name="country" value="{{location.country}}"><br>
+        Phone Number: <input type="text" class="locations-text" name="phoneNumber" value="{{location.phoneNumber}}"><br> 
+
+        <button class="addBtn" onclick="updateLocation({{location.id}})">Update</button>
+        </form> 
+    </div>
+</html>

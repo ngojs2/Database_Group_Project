@@ -1,0 +1,59 @@
+<html>
+
+    <head>
+
+        <meta charset="UTF-8">
+
+        <link rel="stylesheet" type="text/css" href="/style.css">
+
+        <title>Add Items to Order</title>
+
+    </head>
+
+    <body>
+		
+		<div class="details">
+
+        <h3>Add Items to Order</h3>
+
+		<h4>Your Order ID#: {{order_id}}</h4>
+
+			<form class="add-form" action"/addDetails" method="post">
+				
+				<input type="hidden" class="form-text2" name="orderID" value="{{order_id}}">
+				<label class="form-label">Product Name</label>
+					<select name="productID" class="form-text2">
+						{{#each products}}
+							<option value="{{id}}">{{productName}}</option>
+						{{/each}}
+					</select><br>
+				<label class="form-label">Quantity</label>
+					<input type="text" class="form-text2" name="quantity">
+					<br>
+					<input type="submit" class="addBtn" value="Add Item">
+				</form>
+				<br>
+				<br>
+
+			<h3>Current Items In Order</h3>
+			<table class="details">
+				<thead>
+					<th>Order ID</th>
+					<th>Product ID</th>
+					<th>Quantity</th>
+				</thead>
+				<tbody>
+					{{#each details}}
+					<tr>
+						<td>{{orderID}}</td>
+						<td>{{productID}}</td>
+						<td>{{quantity}}</td>
+					</tr>
+					{{/each}}
+				</tbody>
+			</table>
+				<br>
+				<td><button class="addBtn"><a href="/orders" class="btn-link">Done</a></button></td>
+        </div>
+    </body>
+</html>

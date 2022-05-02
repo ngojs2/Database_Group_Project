@@ -1,0 +1,88 @@
+
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        
+        <link rel="stylesheet" type="text/css" href="/style.css">
+        <title>Products</title>
+    </head>
+    <body>
+
+        <div class="products">
+            <h2>Products</h2>
+
+            <h3>Add a Product</h3>
+
+            <!--- Form to add products-->
+            <form class="products-form" action="/products" method="post">
+                
+                <label>Product Name:</label>
+                <input type="text" class="products-text" name="productName">
+                <br>
+                <label>Price:</label>
+                <input type="text" class="products-text" name="price">
+                <br>
+                <label>Brand:</label>
+                <input type="text" class="products-text" name="brand">
+                <br>
+                <label>Category:</label>
+                <input type="text" class="products-text" name="category">
+                <br>
+                Store ID
+				<select name="storeID">
+					{{#each locations}}
+						<option value="{{id}}">{{id}}</option>
+					{{/each}}
+                </select><br>
+                <br>
+                <input type="submit" class="addBtn" value="Add Product">
+            
+            </form>
+
+            <br>
+
+            <!--- Form to filter products -->
+            <form id='filter_products' action='' method=''>
+                <label> Filter Products by Store </label>
+                <select id='store_filter' name="storeID"> 
+                    {{#each locations}}
+                    <option value="{{id}}">{{id}}</option>
+                    {{/each}}
+                </select><br>
+             <input type="button" class="addBtn" value="Filter" onclick="filterProductsByStore()">
+            </form>
+            
+            <br>
+
+            <!--- Table to display products -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product ID</th>
+                        <th>Product Name</th>
+                        <th>Price</th>
+                        <th>Brand</th>
+                        <th>Category</th>
+                        <th>Store ID</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  {{#each products}}
+                    <tr>
+                        <td>{{productID}}</td>
+                        <td>{{productName}}</td>
+                        <td>{{price}}</td>
+                        <td>{{brand}}</td>
+                        <td>{{category}}</td>
+                        <td>{{storeID}}</td>
+                        <td><button class="addBtn"><a href="/products/{{productID}}">Edit</a></button></td>
+                        <td><button class="addBtn" onclick="deleteProduct({{productID}})">Delete</button></td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+       
+    </body>
+</html>

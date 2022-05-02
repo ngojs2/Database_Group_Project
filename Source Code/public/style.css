@@ -1,0 +1,549 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    
+
+}
+
+/*Styling for nav*/
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: lightblue;
+}
+
+
+/*Styling for portfolio logo*/
+.logo{
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 25px;
+}
+
+/*Styling for nav bar links*/
+.nav-bar{
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+
+}
+
+/*Remove list style */
+.nav-bar li{
+    list-style: none;
+}
+
+/*Styling for anchor*/
+.nav-bar a{
+    color: white;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 25px;
+}
+
+
+/*Styling for headers*/
+.orders h2{
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    color: grey;
+}
+
+.products h2{
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    color: grey;
+}
+
+.customers h2{
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    color: grey;
+}
+
+.locations h2{
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    color: grey;
+}
+
+.details h2{
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    color: grey;
+}
+
+/*Styling for tables*/
+.products table{
+    border-collapse:collapse;
+} 
+
+/*Styling for product table*/
+.products thead th{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 150px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.products tbody tr{
+    width: 150px;
+    text-align: center;
+    letter-spacing: 1px;
+
+}
+
+.products tbody td{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.products tbody tr:nth-of-type(even) {
+    background-color:lightgrey;
+}
+
+.products tbody tr:nth-of-type(odd) {
+    background-color:white;
+}
+
+/*Styling for locations table*/
+.locations table{
+    border-collapse:collapse;
+} 
+
+.locations thead th{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 300px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.locations tbody tr{
+    width: 150px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.locations tbody td{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.locations tbody tr:nth-of-type(even) {
+    background-color:lightgrey;
+}
+.locations tbody tr:nth-of-type(odd) {
+    background-color:white;
+}
+
+/*Styling for orders table*/
+.orders table{
+    border-collapse:collapse;
+} 
+
+.orders thead th{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 150px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.orders tbody tr{
+    width: 50px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.orders tbody td{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.orders tbody tr:nth-of-type(even) {
+    background-color:lightgrey;
+}
+
+.orders tbody tr:nth-of-type(odd) {
+    background-color:white;
+}
+
+/*Styling for customers table*/
+.customers table{
+    border-collapse:collapse;
+} 
+
+.customers thead th{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 150px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.customers tbody tr{
+    width: 50px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.customers tbody td{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.customers tbody tr:nth-of-type(even) {
+    background-color:lightgrey;
+}
+.customers tbody tr:nth-of-type(odd) {
+    background-color:white;
+}
+
+/* Styling for details table*/
+.details table{
+    border-collapse:collapse;
+} 
+
+.details thead th{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 150px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.details tbody tr{
+    width: 50px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.details tbody td{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.details tbody tr:nth-of-type(even) {
+    background-color:lightgrey;
+}
+.details tbody tr:nth-of-type(odd) {
+    background-color:white;
+}
+
+/* Styling for hyperlink */
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+/* Styling for edit and delete buttons */
+.button1 {
+    background-color: #2ebc99;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    margin: auto;
+    padding: 15px 30 px;
+    text-align: center;
+    width: 100px;
+}
+
+.button1:hover {
+    background-color: 388087; 
+    color: ivory;
+  }
+
+  /*Styling for Order page buttons */
+.button2 {
+    background-color: #6FB3B8;
+    border-radius: 2px;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 20px;
+    margin: auto;
+    padding: 14px 40px;
+    text-align: center;
+    transition-duration: 0.3s;
+    
+}
+
+.button2:hover {
+    background-color: #388087;
+    color: ivory;
+}
+
+ /*Styling for Submit buttons */
+ .button3 {
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #2ebc99;
+    color: white;
+    
+}
+
+.button3:hover {
+    background-color: #289479;
+    color: white;
+}
+
+
+
+/*Centering the Orders page*/
+.orders {
+    margin: auto;
+    text-align: center;
+    width: 75%;
+    padding: 10px;
+}
+
+/* Centering the Details page*/
+.details {
+    margin: auto;
+    text-align: center;
+    width: 60%;
+    padding: 10px;
+}
+
+/* Centering the Customers page*/
+.customers {
+    margin: auto;
+    text-align: center;
+    width: 75%;
+    padding: 10px;
+}
+
+
+
+/*--------UPDATE-------------*/
+/*Styling for products forms*/
+.products h3 {
+   text-align: center;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   background-color: #2ebc99;
+   display: block;
+   color: white;
+}
+
+
+.products-form {
+    padding-top: 20px;
+   max-width: 500px;
+   margin: auto;
+   overflow: hidden;
+   text-align: center;
+}
+
+.products-text {
+    display: block;
+    width: 95%;
+    margin: 5px;
+    overflow: auto;
+    text-align: center;
+}
+
+/*Styling for locations forms*/
+.locations h3 {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #2ebc99;
+    display: block;
+    color: white;
+ }
+
+.locations-form {
+    padding-top: 20px;
+   max-width: 500px;
+   margin: auto;
+   overflow: hidden;
+   text-align: center;
+}
+
+.locations-text {
+    display: block;
+    width: 95%;
+    margin: 5px;
+    overflow: auto;
+    text-align: center;
+}
+
+
+.addBtn{
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #2ebc99;
+    color: white;
+}
+
+.deleteBtn{
+    border-radius: 10px;
+    padding: 5px;
+    
+}
+
+.editBtn{
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.searchBtn{
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #2ebc99;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+/*Styling for search forms*/
+.search h3 {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #2ebc99;
+    display: block;
+    color: white;
+ }
+
+.search-form {
+    padding-top: 20px;
+   max-width: 500px;
+   margin: auto;
+   overflow: hidden;
+   text-align: center;
+}
+
+.search-text {
+    display: block;
+    width: 95%;
+    margin: 5px;
+    overflow: auto;
+    text-align: center;
+}
+
+/*Styling for edit forms*/
+.edit h3 {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #2ebc99;
+    display: block;
+    color: white;
+ }
+
+.edit-form {
+    padding-top: 20px;
+   max-width: 500px;
+   margin: auto;
+   overflow: hidden;
+   text-align: center;
+}
+
+.edit-text {
+    display: block;
+    width: 95%;
+    margin: 5px;
+    overflow: auto;
+    text-align: center;
+}
+
+/*Styling for Carousel*/
+.carousel-container{
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-images{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.welcome {
+    text-align: center;
+    padding: 20px;
+}
+
+/*--------UPDATE-------------*/
+/*Styling for customers page*/
+.customers h3 {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #2ebc99;
+    display: block;
+    color: white;
+ }
+
+ .orders h3 {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #2ebc99;
+    display: block;
+    color: white;
+ }
+ .add-form {
+    padding-top: 20px;
+   max-width: 500px;
+   margin: auto;
+   overflow: hidden;
+   text-align: center;
+}
+
+.form-text {
+    display: inline-block;
+    width: 70%;
+    margin: 5px;
+    overflow: auto;
+    text-align: center;
+}
+
+.form-text2{
+    //display: inline-block;
+    width: 200px;
+    margin: 5px;
+    overflow: auto;
+    text-align: left;
+}
+
+a.btn-link{
+color: black;
+background-color: transparent;
+text-decoration: none;
+}
+
+.form-label {
+	width: 100px;
+	display: inline-block;
+}
+
+.filter-label{
+	width: 175px;
+	display: inline-block;
+}

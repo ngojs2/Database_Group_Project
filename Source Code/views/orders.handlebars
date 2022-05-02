@@ -1,0 +1,105 @@
+<html>
+
+    <head>
+
+        <meta charset="UTF-8">
+
+        
+
+        <link rel="stylesheet" type="text/css" href="/style.css">
+
+        <title>Orders</title>
+
+    </head>
+
+    <body>
+
+
+        <div class="orders">
+            <h2>Orders</h2>
+
+            <h3>Add Order</h3>
+
+            <form id="addcustomer" class="add-form" action="/orders" method="post">
+                
+                <label class="form-label">Customer ID</label>
+				<select name="customerID" class="form-text2">
+					{{#each customers}}
+						<option value="{{id}}">{{id}}</option>
+					{{/each}}
+				</select><br>
+				<input type="hidden" class="form-text" name="orderStatus" value="In Progress">
+                <label class="form-label">Order Date:</label>
+                <input type="date" class="form-text2" name="orderDate">
+                <br>
+                <label class="form-label">Store ID:</label>
+				<select name="storeID" class="form-text2">
+					{{#each locations}}
+						<option value="{{store}}">{{store}}</option>
+					{{/each}}
+				</select><br>
+                <label class="form-label">Credit Card#:</label>
+                <input type="text" class="form-text2" name="payment">
+                <br>
+                <input type="submit" class="addBtn" value="Add Order">
+            </form>
+            <br>
+
+			<h3>Filter Orders</h3>
+            <!--- Form to filter Orders By Customer ID -->
+            <form id='filter_orders' action='' method=''>
+                <label class="filter-label">Filter by Customer ID</label>
+                <select id='customerID_filter' name="customerID" class="form-text2"> 
+                    {{#each customers}}
+                    <option value="{{id}}">{{id}}</option>
+                    {{/each}}
+                </select>
+             <input type="button" value="Filter" class="editBtn" onclick="filterOrdersByCustomerID()">
+            </form>
+
+            <!--- Form to filter Orders By Store ID -->
+            <form id='filter_orders' action='' method=''>
+                <label class="filter-label">Filter by Store ID</label>
+                <select id='storeID_filter' name="storeID" class="form-text2"> 
+                    {{#each locations}}
+                    <option value="{{store}}">{{store}}</option>
+                    {{/each}}
+                </select>
+             <input type="button" value="Filter" class="editBtn" onclick="filterOrdersByStoreID()">
+            </form>
+
+			<h3>All Orders</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Customer ID</th>
+                        <th>Order Status</th>
+                        <th>Order Date</th>
+                        <th>Shipped Date</th>
+                        <th>Store ID</th>
+                        <th>Payment</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each orders}}
+                    <tr>
+                        <td>{{orderID}}</td>
+                        <td>{{customerID}}</td>
+                        <td>{{orderStatus}}</td>
+                        <td>{{orderDate}}</td>
+                        <td>{{shippedDate}}</td>
+                        <td>{{storeID}}</td>
+                        <td>{{payment}}</td>
+                        
+						<td><button class="editBtn"><a href="/details/{{orderID}}" class="btn-link">View Details</a></button></td>
+						<td><button class="editBtn"><a href="/orders/{{orderID}}" class="btn-link">Edit</a></button></td>
+                        <td><button class="deleteBtn" onclick="deleteOrder({{orderID}})">Delete</button></td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
